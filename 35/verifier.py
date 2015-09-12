@@ -20,6 +20,8 @@ for name in range(1,6):
     print("checking a key...")
 
     for mail in root:
+        sender = mail[0].text
+        topic = mail[1].text
         msg = mail[2].text
         sig = mail[3].text
         if checkSignature(msg, sig):
